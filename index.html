@@ -3,30 +3,76 @@
   <head>
     <meta charset="utf-8">
     <title>My profile</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
-    <div class="container">
-      <div class="card">
-        <img src="images/profile-picture.png" alt="My profile picture">
+    <div id="page">
 
-        <h1>Your Name</h1>
-        <h2>Bachelor student at IESEG Lille</h2>
+      <!-- HEADER / INTRO -->
+      <header id="intro" class="card">
+        <img id="avatar" src="images/profile-picture.png" alt="My profile picture">
 
-        <p>
-          I am a curious business student interested in marketing, data and new technologies.
-          I like cooking, discovering new places and using digital tools to make life easier.
+        <h1>Hello, I’m Your Name 👋</h1>
+        <p class="lead">
+          I’m a Bachelor student at IESEG Lille who loves business, marketing and technology.
+          I recently started learning to code and I’m really enjoying it!
         </p>
 
-        <a href="mailto:your.email@example.com" class="btn">Contact me</a>
+        <a href="https://www.lewagon.com" class="btn" target="_blank">
+          Discover the website I like
+        </a>
+      </header>
 
-        <ul>
-          <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
-          <li><a href="https://github.com" target="_blank">GitHub</a></li>
-          <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
-        </ul>
-      </div>
+      <!-- SECTIONS WRAPPER -->
+      <main id="content">
+
+        <section id="hobbies" class="card section-block">
+          <h2>My hobbies</h2>
+          <p>
+            I love cooking new recipes, especially desserts, and sharing them with friends.
+            I also enjoy discovering new cafés and walking around Lille.
+          </p>
+        </section>
+
+        <section id="passions" class="card section-block">
+          <h2>My passions</h2>
+          <p>
+            I am passionate about digital tools, data and how technology can make everyday life easier.
+            That’s why I’m very excited about learning HTML, CSS and other web skills.
+          </p>
+        </section>
+
+        <section id="projects" class="card section-block">
+          <h2>My projects</h2>
+          <p>
+            My goal is to work in international business and marketing, while keeping a strong tech culture.
+            I would love to combine data analysis with creative projects in the future.
+          </p>
+        </section>
+
+        <!-- SOCIAL LINKS -->
+        <section id="social" class="card">
+          <h2>Follow me</h2>
+          <p class="small">
+            You can find me on these platforms:
+          </p>
+          <ul class="social-links">
+            <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
+            <li><a href="https://github.com" target="_blank">GitHub</a></li>
+            <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+          </ul>
+        </section>
+
+      </main>
+
     </div>
   </body>
 </html>
