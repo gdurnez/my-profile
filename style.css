@@ -1,6 +1,6 @@
-/* -------------------------
+/* -----------------------------
    RESET & BASE
--------------------------- */
+------------------------------ */
 
 * {
   margin: 0;
@@ -14,97 +14,114 @@ html {
 }
 
 body {
-  background: radial-gradient(circle at top, #ff9a9e 0%, #fad0c4 40%, #1f2933 100%);
   font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: #1f2933;
+  color: #0f172a;
+  background: radial-gradient(circle at top, #e0f2fe 0%, #bfdbfe 35%, #0f172a 100%);
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-/* -------------------------
-   PAGE LAYOUT
--------------------------- */
+/* -----------------------------
+   PAGE WRAPPER
+------------------------------ */
 
 #page {
   width: 100%;
-  max-width: 980px;
-  padding: 40px 20px;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 32px 20px 40px;
 }
 
-/* on utilise un grid pour les sections au milieu */
-#content {
-  margin-top: 24px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+/* -----------------------------
+   NAVBAR
+------------------------------ */
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 26px;
+}
+
+.logo {
+  font-family: "Poppins", system-ui, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #111827;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
   gap: 18px;
 }
 
-/* -------------------------
-   CARD COMPONENT
--------------------------- */
+.nav-links a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #1f2937;
+  padding: 6px 10px;
+  border-radius: 999px;
+  transition: background-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+.nav-links a:hover {
+  background-color: rgba(59, 130, 246, 0.08);
+  color: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* -----------------------------
+   CARDS GENERIC
+------------------------------ */
 
 .card {
   background-color: #ffffff;
   border-radius: 18px;
-  padding: 28px 26px;
-  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.28);
+  padding: 26px 26px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.25);
   position: relative;
   overflow: hidden;
 }
 
-/* léger décor graphique */
+/* halo décoratif dans le coin */
 .card::before {
   content: "";
   position: absolute;
-  inset: -120px auto auto -80px;
-  width: 220px;
-  height: 220px;
-  background: radial-gradient(circle at center, rgba(236, 72, 153, 0.35), transparent);
+  inset: -120px auto auto -90px;
+  width: 240px;
+  height: 240px;
+  background: radial-gradient(circle at center, rgba(59, 130, 246, 0.45), transparent);
   pointer-events: none;
 }
 
-/* on garde le contenu au-dessus du décor */
 .card > * {
   position: relative;
   z-index: 1;
 }
 
-/* Intro card centrée */
-#intro {
-  text-align: center;
-  margin-bottom: 22px;
+/* -----------------------------
+   INTRO CARD (flex)
+------------------------------ */
+
+.card-intro {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 26px;
+  align-items: center;
+  margin-bottom: 26px;
 }
 
-/* -------------------------
-   AVATAR
--------------------------- */
-
-#avatar {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 5px solid #fff;
-  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.45);
-  margin-bottom: 18px;
+.intro-left {
+  display: flex;
+  justify-content: center;
 }
 
-/* -------------------------
-   TYPOGRAPHY
--------------------------- */
-
-h1 {
+.intro-right h2 {
   font-family: "Poppins", system-ui, sans-serif;
-  font-size: 2.1rem;
-  letter-spacing: 0.03em;
-  margin-bottom: 8px;
-}
-
-h2 {
-  font-family: "Poppins", system-ui, sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   margin-bottom: 10px;
   color: #111827;
 }
@@ -113,14 +130,96 @@ h2 {
   font-size: 1rem;
   line-height: 1.7;
   color: #4b5563;
-  max-width: 540px;
-  margin: 0 auto 18px auto;
+  margin-bottom: 10px;
 }
 
-.section-block p {
+.intro-right p {
   font-size: 0.96rem;
   line-height: 1.6;
   color: #4b5563;
+}
+
+/* -----------------------------
+   AVATAR
+------------------------------ */
+
+#avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #ffffff;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.45);
+}
+
+/* -----------------------------
+   MAIN CONTENT GRID
+------------------------------ */
+
+#content {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+/* sections texte */
+.section-block h2 {
+  font-family: "Poppins", system-ui, sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.section-block p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #4b5563;
+  margin-bottom: 10px;
+}
+
+.section-block ul {
+  list-style: disc;
+  padding-left: 18px;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.section-block li + li {
+  margin-top: 4px;
+}
+
+/* -----------------------------
+   BUTTON
+------------------------------ */
+
+.btn {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 10px 26px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #3b82f6, #ec4899);
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  box-shadow: 0 12px 26px rgba(59, 130, 246, 0.45);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px rgba(59, 130, 246, 0.55);
+  filter: brightness(1.05);
+}
+
+/* -----------------------------
+   SOCIAL SECTION
+------------------------------ */
+
+#social {
+  grid-column: 1 / -1; /* prend toute la largeur */
 }
 
 .small {
@@ -129,47 +228,17 @@ h2 {
   margin-bottom: 10px;
 }
 
-/* -------------------------
-   BUTTON
--------------------------- */
-
-.btn {
-  display: inline-block;
-  margin-top: 8px;
-  padding: 10px 28px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, #ec4899, #f97316);
-  color: #ffffff;
-  font-size: 0.95rem;
-  font-weight: 600;
-  text-decoration: none;
-  letter-spacing: 0.04em;
-  box-shadow: 0 10px 22px rgba(236, 72, 153, 0.5);
-  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 16px 32px rgba(236, 72, 153, 0.6);
-  filter: brightness(1.05);
-}
-
-/* -------------------------
-   SOCIAL LINKS
--------------------------- */
-
 .social-links {
   list-style: none;
   display: flex;
-  justify-content: center;
-  gap: 14px;
-  margin-top: 10px;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .social-links a {
   text-decoration: none;
   font-size: 0.9rem;
-  color: #2563eb;
+  color: #1d4ed8;
   padding: 6px 12px;
   border-radius: 999px;
   background-color: #eff6ff;
@@ -182,40 +251,72 @@ h2 {
   transform: translateY(-1px);
 }
 
-/* -------------------------
-   RESPONSIVE DESIGN
--------------------------- */
+/* -----------------------------
+   FOOTER
+------------------------------ */
 
-@media (max-width: 850px) {
+#footer {
+  margin-top: 20px;
+  text-align: center;
+  color: #e5e7eb;
+  font-size: 0.85rem;
+}
+
+/* -----------------------------
+   RESPONSIVE DESIGN
+------------------------------ */
+
+@media (max-width: 900px) {
+  #content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .card-intro {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .intro-right {
+    text-align: left;
+  }
+
   #content {
     grid-template-columns: 1fr;
   }
 
-  .card {
-    padding: 24px 22px;
-  }
-
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  #avatar {
-    width: 135px;
-    height: 135px;
+  #social {
+    grid-column: auto;
   }
 }
 
 @media (max-width: 480px) {
   #page {
-    padding: 24px 12px;
+    padding: 24px 14px 32px;
   }
 
   .card {
+    padding: 22px 20px;
     border-radius: 14px;
   }
 
-  .lead,
-  .section-block p {
-    font-size: 0.9rem;
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .intro-right h2 {
+    font-size: 1.5rem;
+  }
+
+  #avatar {
+    width: 130px;
+    height: 130px;
   }
 }
