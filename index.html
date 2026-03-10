@@ -16,55 +16,95 @@
   <body>
     <div id="page">
 
-      <!-- HEADER / INTRO -->
-      <header id="intro" class="card">
-        <img id="avatar" src="images/profile-picture.png" alt="My profile picture">
+      <!-- Navigation -->
+      <nav id="navbar">
+        <h1 class="logo">Your Name</h1>
+        <ul class="nav-links">
+          <li><a href="#intro">About</a></li>
+          <li><a href="#hobbies">Hobbies</a></li>
+          <li><a href="#passions">Passions</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#social">Social</a></li>
+        </ul>
+      </nav>
 
-        <h1>Hello, I’m Your Name 👋</h1>
-        <p class="lead">
-          I’m a Bachelor student at IESEG Lille who loves business, marketing and technology.
-          I recently started learning to code and I’m really enjoying it!
-        </p>
+      <!-- INTRO SECTION -->
+      <header id="intro" class="card card-intro">
+        <div class="intro-left">
+          <img id="avatar" src="images/profile-picture.png" alt="My profile picture">
+        </div>
 
-        <a href="https://www.lewagon.com" class="btn" target="_blank">
-          Discover the website I like
-        </a>
+        <div class="intro-right">
+          <h2>Hello, I’m Your Name 👋</h2>
+          <p class="lead">
+            I’m a Bachelor student at IESEG Lille, passionate about business, marketing and technology.
+            I’ve recently started coding and I’m really enjoying building my own web pages.
+          </p>
+
+          <p>
+            When I’m not studying, you’ll probably find me testing new recipes, scrolling through tech news
+            or exploring new places in Lille with my friends.
+          </p>
+
+          <a href="https://www.lewagon.com" class="btn" target="_blank">
+            Visit a website I love
+          </a>
+        </div>
       </header>
 
-      <!-- SECTIONS WRAPPER -->
+      <!-- MAIN CONTENT -->
       <main id="content">
 
+        <!-- HOBBIES -->
         <section id="hobbies" class="card section-block">
           <h2>My hobbies</h2>
           <p>
-            I love cooking new recipes, especially desserts, and sharing them with friends.
-            I also enjoy discovering new cafés and walking around Lille.
+            I love cooking, especially desserts and comfort food from different countries. I enjoy inviting
+            people over to try my dishes and get their feedback.
           </p>
+          <ul>
+            <li>Trying new dessert recipes every month</li>
+            <li>Exploring cafés and bakeries around Lille</li>
+            <li>Watching cooking shows and food vlogs</li>
+          </ul>
         </section>
 
+        <!-- PASSIONS -->
         <section id="passions" class="card section-block">
           <h2>My passions</h2>
           <p>
-            I am passionate about digital tools, data and how technology can make everyday life easier.
-            That’s why I’m very excited about learning HTML, CSS and other web skills.
+            I’m passionate about digital tools, data and how technology can improve everyday life.
+            Learning HTML and CSS is my first step into the world of web development.
           </p>
+          <ul>
+            <li>Discovering new apps and productivity tools</li>
+            <li>Learning the basics of web development</li>
+            <li>Understanding how data can help make better decisions</li>
+          </ul>
         </section>
 
+        <!-- PROJECTS -->
         <section id="projects" class="card section-block">
           <h2>My projects</h2>
           <p>
-            My goal is to work in international business and marketing, while keeping a strong tech culture.
-            I would love to combine data analysis with creative projects in the future.
+            In the future, I want to combine international business, marketing and tech.
+            I would love to work on projects where I can use both creativity and analytical skills.
           </p>
+          <ul>
+            <li>Build a small personal website to present my CV</li>
+            <li>Start a simple blog about student life and productivity</li>
+            <li>Work on data or marketing projects during my studies</li>
+          </ul>
         </section>
 
         <!-- SOCIAL LINKS -->
-        <section id="social" class="card">
-          <h2>Follow me</h2>
+        <section id="social" class="card section-block">
+          <h2>Stay in touch</h2>
           <p class="small">
-            You can find me on these platforms:
+            You can follow me or contact me through these links:
           </p>
           <ul class="social-links">
+            <li><a href="mailto:your.email@example.com" target="_blank">Email</a></li>
             <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
             <li><a href="https://github.com" target="_blank">GitHub</a></li>
             <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
@@ -73,6 +113,14 @@
 
       </main>
 
+      <!-- FOOTER -->
+      <footer id="footer">
+        <p>
+          Made with ♥ while learning to code.
+        </p>
+      </footer>
+
     </div>
   </body>
 </html>
+
